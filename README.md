@@ -2,7 +2,8 @@
 
 This project explores adversarial attacks on ImageNet models such as Resnet.
 Some of the key results and discoveries are briefly presented below. The full report
-can be found in the [notebook](adverserial_attacks_imagenet.ipynb).
+can be found in the [notebook](adverserial_attacks_imagenet.ipynb), and can be
+viewed online [here](https://nbviewer.org/github/marcusGH/adversarial-attacks-on-imagenet-models/blob/main/adverserial_attacks_imagenet.ipynb).
 
 <!-- vim-markdown-toc GFM -->
 
