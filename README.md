@@ -1,9 +1,19 @@
 # Adversarial attacks on ImageNet models
 
+This project explores adversarial attacks on ImageNet models such as Resnet.
+Some of the key results and discoveries are briefly presented below. The full report
+can be found in the [notebook](adverserial_attacks_imagenet.ipynb).
 
+<!-- vim-markdown-toc GFM -->
 
+* [FGSM](#fgsm)
+* [Targeted attacks](#targeted-attacks)
+* [Blackbox attacks](#blackbox-attacks)
+* [Targeted blackbox attacks](#targeted-blackbox-attacks)
+* [Universal targeted attacks](#universal-targeted-attacks)
+* [References](#references)
 
-TODO: toc
+<!-- vim-markdown-toc -->
 
 ## FGSM
 
@@ -12,7 +22,7 @@ completely different.
 
 ![image](https://user-images.githubusercontent.com/29378769/195874464-b530851f-08e4-468b-ab85-b8a0f2827e3c.png)
 
-## Targeted attacks 
+## Targeted attacks
 
 To do target attacks, we use gradient descent on
 
@@ -24,9 +34,9 @@ With this, we can for instance make the Border Collie dog seems like a sea slug:
 
 ![image](https://user-images.githubusercontent.com/29378769/195877904-47d9a347-4a1e-4462-af3d-4f04e9208990.png)
 
-## Blackbox attacks 
+## Blackbox attacks
 
-We can also perform blackbox attacks on the model (i.e. only using the forward pass of the network) by iteratively choosing a random direction $\eta \sim \mathcal{N}(\mathbf{0}, \sigma)$ and updating the noise on the image if this increases the model's loss. Doing this for just 200 iterations makes the model missclassify the dog breed, and after 10 000 iterations, we dog is perceived as toilet paper:
+We can also perform blackbox attacks on the model (i.e. only using the forward pass of the network) by iteratively choosing a random direction $\eta \sim \mathcal{N}(\mathbf{0}, \sigma)$ and updating the noise on the image if this increases the model's loss. Doing this for just 200 iterations makes the model missclassify the dog breed, and after 10 000 iterations, the dog is perceived as toilet paper:
 
 ![image](https://user-images.githubusercontent.com/29378769/195879223-ae298711-2749-4057-b035-9327ef3ebc03.png)
 
